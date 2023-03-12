@@ -44,7 +44,7 @@ def calculate_lookangles(a, b):
   
   if bearing < 0:
     bearing = 360-bearing #I THINK? I'm not sure
-  if bearing > 0:
+  if bearing > 360:
      bearing = bearing - 360
   
 
