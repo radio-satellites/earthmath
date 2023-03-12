@@ -44,6 +44,8 @@ def calculate_lookangles(a, b):
   
   if bearing < 0:
     bearing = 360-bearing #I THINK? I'm not sure
+  if bearing > 0:
+     bearing = bearing - 360
   
 
   return {
@@ -53,15 +55,4 @@ def calculate_lookangles(a, b):
     'great_circle_distance': great_circle_distance
   }
 
-
-print(
-  calculate_lookangles({
-    'lon': -74.2598688,
-    'lat': 40.6971494,
-    'alt': 0
-  }, {
-    'lon': -75.19,
-    'lat': 0.03,
-    'alt': 35784010
-  })) #An example for GOES-16 calculation
 
